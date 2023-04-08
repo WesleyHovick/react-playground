@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Rocket League Training Calendar</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <body>
         <Main />
