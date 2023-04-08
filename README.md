@@ -4,6 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## RL Training Schedule
 Create your own training schedule and routine for Rocket League.
 
+## Deployment
+This app is automatically deployed to GitHub pages through GitHub actions, hosted at: https://wesleyhovick.github.io/rl-training-schedule/
+
 ## Getting Started
 
 First, run the development server:
