@@ -1,49 +1,48 @@
 import type { ReactElement } from 'react'
-import { AppBar, AppBarProps, CssBaseline, Divider, Drawer, DrawerProps, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar } from '@mui/material'
-import HomeIcon from '@mui/icons-material/Home';
+import { 
+    AppBar, 
+    CssBaseline, 
+    Divider, 
+    Drawer, 
+    List, 
+    ListItem, 
+    ListItemButton, 
+    ListItemIcon, 
+    ListItemText, 
+    Toolbar 
+} from '@mui/material'
 
-const sideNavWidth = 240
+import ChecklistIcon from '@mui/icons-material/Checklist'
+import AddIcon from '@mui/icons-material/Add'
 
-const drawerProps: DrawerProps = {
-    sx: {
-        width: sideNavWidth, 
-        flexShring: 0, 
-        '& .MuiDrawer-paper': {
-            width: sideNavWidth,
-            boxSizing: 'border-box'            
-        }
-    },
-    variant: 'permanent',
-    anchor: 'left'
-}
-
-const appBarProps: AppBarProps = {
-    sx: {
-        width: `calc(100% - ${sideNavWidth}px)`, 
-        ml: `${sideNavWidth}px`
-    },
-    position: 'fixed'
-}
+const sideNavOptions = [
+    { name: 'My Routines', icon: <ChecklistIcon />},
+    { name: 'New Training Routine', icon: <AddIcon />}
+]
 
 export const SideNav = (): ReactElement => {
     return (
         <>
             <CssBaseline />
-            <AppBar {...appBarProps}>
-                <Drawer {...drawerProps}>
+            <AppBar>
+                <Drawer variant='permanent' anchor='left'>
                     <Toolbar>
                         {'RL Training Calendar'}
                     </Toolbar>
                     <Divider />
                     <List>
-                        <ListItem key={'Home'} disablePadding>
-                            <ListItemButton color={'primary'}>
-                                <ListItemIcon>
-                                    <HomeIcon />
-                                </ListItemIcon>
-                                <ListItemText primary={'Home'} />
-                            </ListItemButton>
-                        </ListItem>
+                        {
+                            sideNavOptions.map((option) => (
+                                <ListItem key={option.name} disablePadding>
+                                    <ListItemButton color={'primary'}>
+                                        <ListItemIcon>
+                                            {option.icon}
+                                        </ListItemIcon>
+                                        <ListItemText primary={option.name} />
+                                    </ListItemButton>
+                                </ListItem>
+                            ))
+                        }
                     </List>
                 </Drawer>
             </AppBar>
