@@ -27,9 +27,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Test Action
-        env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -68,6 +65,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
