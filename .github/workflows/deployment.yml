@@ -27,6 +27,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Test Action
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
       - name: Detect package manager
         id: detect-package-manager
         run: |

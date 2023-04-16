@@ -1,8 +1,10 @@
 import { themeOptions } from '@/themeOptions'
 import styled from '@emotion/styled'
-import { Theme, ThemeProvider, createTheme } from '@mui/material'
+import { Container, Theme, ThemeProvider, createTheme } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
 import type { ReactElement } from 'react'
+import { Header } from './Header'
+import { SideNav } from './SideNav'
 
 interface IBaseLayout {
     children?: React.ReactNode
@@ -22,7 +24,9 @@ export const BaseLayout: React.FC<IBaseLayout> = ({
             <ThemeProvider theme={theme}>
                 {/* CssBaseline needs a child of ThemeProvider at some point in the DOM structure */}
                 <CssBaseline />
-                {children}
+                <Header />
+                <SideNav />
+                <Container>{children}</Container>
             </ThemeProvider>
         </StyledBaseLayout>
     )

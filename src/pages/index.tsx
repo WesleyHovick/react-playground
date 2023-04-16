@@ -1,20 +1,27 @@
 import { BaseLayout } from '@/components/BaseLayout'
-import { Main } from '@/components/main/Main'
-import { SideNav } from '@/components/sideNav/SideNav'
-import { AppBar, Toolbar, Typography } from '@mui/material'
+import { InferGetServerSidePropsType } from 'next'
 
-export default function Home() {
-    return (
-        <>
-            <BaseLayout>
-                <AppBar>
-                    <Toolbar color="main">
-                        <Typography variant="h4">Hello, world!</Typography>
-                    </Toolbar>
-                </AppBar>
-                <SideNav />
-                <Main />
-            </BaseLayout>
-        </>
-    )
+export async function getServerSideProps() {
+    let res = await fetch("http://localhost:3000/api/weather", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+
+    const allWeather = await res.json();
+
+    return {
+        props: {
+            allWeather
+        },
+    }
+}
+
+export default function Home({
+    allWeather
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+    console.log({allWeather})
+
+    return <BaseLayout />
 }
