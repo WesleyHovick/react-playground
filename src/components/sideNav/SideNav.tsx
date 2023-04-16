@@ -1,3 +1,5 @@
+import AddIcon from '@mui/icons-material/Add'
+import ChecklistIcon from '@mui/icons-material/Checklist'
 import {
     Divider,
     Drawer,
@@ -9,9 +11,6 @@ import {
     Toolbar,
 } from '@mui/material'
 import type { ReactElement } from 'react'
-
-import AddIcon from '@mui/icons-material/Add'
-import ChecklistIcon from '@mui/icons-material/Checklist'
 
 const sideNavOptions = [
     { name: 'Checklists', icon: <ChecklistIcon /> },
