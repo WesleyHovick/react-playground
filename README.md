@@ -1,10 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-
 ## React Playground
+
 A prototyping playground for learning React concepts.
 
 ## Deployment
+
 This app is automatically deployed to GitHub pages through GitHub actions, hosted at: https://wesleyhovick.github.io/react-playground/
 
 ## Getting Started
@@ -16,4 +17,3 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-

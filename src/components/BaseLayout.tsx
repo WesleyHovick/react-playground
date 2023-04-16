@@ -1,9 +1,8 @@
-import type { ReactElement } from 'react'
-import type { Theme } from '@mui/material'
-
-import { Container, ThemeProvider, createTheme } from '@mui/material'
-import CssBaseline from '@mui/material/CssBaseline'
 import { themeOptions } from '@/themeOptions'
+import styled from '@emotion/styled'
+import { Theme, ThemeProvider, createTheme } from '@mui/material'
+import CssBaseline from '@mui/material/CssBaseline'
+import type { ReactElement } from 'react'
 
 interface IBaseLayout {
     children?: React.ReactNode
@@ -11,13 +10,20 @@ interface IBaseLayout {
 
 const theme: Theme = createTheme(themeOptions)
 
-export const BaseLayout: React.FC<IBaseLayout> = ({ children }): ReactElement => {
+const StyledBaseLayout = styled.div`
+    display: flex;
+`
+
+export const BaseLayout: React.FC<IBaseLayout> = ({
+    children,
+}): ReactElement => {
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Container>
-                { children }
-            </Container>
-        </ThemeProvider>
+        <StyledBaseLayout>
+            <ThemeProvider theme={theme}>
+                {/* CssBaseline needs a child of ThemeProvider at some point in the DOM structure */}
+                <CssBaseline />
+                {children}
+            </ThemeProvider>
+        </StyledBaseLayout>
     )
 }

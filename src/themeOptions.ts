@@ -1,8 +1,8 @@
-import { ThemeOptions } from "@mui/material";
+import { ThemeOptions } from '@mui/material'
 
-const sideNavWidth = '240px';
+const sideNavWidth = '240px'
 
-const borderColor = 'rgba(210, 210, 210, 0.20)';
+const borderColor = 'rgba(210, 210, 210, 0.20)'
 
 export const themeOptions: ThemeOptions = {
     palette: {
@@ -14,28 +14,28 @@ export const themeOptions: ThemeOptions = {
             main: '#b8b8b9',
         },
         background: {
-            default: '#01050e',
+            default: '#000030',
             paper: '#000E3C',
         },
         text: {
             primary: '#53c1ec',
         },
-        divider: `${borderColor}`
+        divider: `${borderColor}`,
     },
     components: {
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
-                    color: '#53c1ec'
-                }
-            }
+                    color: '#53c1ec',
+                },
+            },
         },
         MuiListItemIcon: {
             styleOverrides: {
                 root: {
-                    minWidth: '40px'
-                }
-            }
+                    minWidth: '40px',
+                },
+            },
         },
         MuiAppBar: {
             styleOverrides: {
@@ -46,7 +46,7 @@ export const themeOptions: ThemeOptions = {
                     borderWidth: 0,
                     borderStyle: 'solid',
                     borderColor: `${borderColor}`,
-                    borderBottomWidth: 'thin'
+                    borderBottomWidth: 'thin',
                 },
                 positionFixed: true,
             },
@@ -54,17 +54,27 @@ export const themeOptions: ThemeOptions = {
         MuiDrawer: {
             styleOverrides: {
                 root: {
-                    width: `${sideNavWidth}`, 
+                    width: `${sideNavWidth}`,
                     flexShrink: 0,
                 },
                 paper: {
                     width: `${sideNavWidth}`,
-                    boxShadow: 'border-box'
-                }
+                    boxShadow: 'border-box',
+                },
+            },
+        },
+        MuiContainer: {
+            styleOverrides: {
+                root: {
+                    paddingTop: '150px',
+                    // maxWidth: '105ch',
+                    border: '1px solid white',
+                    position: 'relative',
+                },
             },
         },
     },
     typography: {
-        fontFamily: 'system-ui'
-    }
-};
+        fontFamily: 'system-ui',
+    },
+}
