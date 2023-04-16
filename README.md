@@ -2,18 +2,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## React Playground
 
-A prototyping playground for learning React concepts.
+A playground for exploring and building with React on Next.js.
 
 ## Deployment
 
-This app is automatically deployed to GitHub pages through GitHub actions, hosted at: https://wesleyhovick.github.io/react-playground/
+This app is automatically deployed through Vercel hosted at: https://wesleyhovick.dev
 
-## Getting Started
+## Development
 
-First, run the development server:
+Run the development server:
 
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)

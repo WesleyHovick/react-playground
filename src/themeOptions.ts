@@ -67,8 +67,6 @@ export const themeOptions: ThemeOptions = {
             styleOverrides: {
                 root: {
                     paddingTop: '150px',
-                    // maxWidth: '105ch',
-                    border: '1px solid white',
                     position: 'relative',
                 },
             },
