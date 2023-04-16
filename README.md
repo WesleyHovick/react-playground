@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 A prototyping playground for learning React concepts.
 
 ## Deployment
-This app is automatically deployed to GitHub pages through GitHub actions, hosted at: https://wesleyhovick.github.io/rl-training-schedule/
+This app is automatically deployed to GitHub pages through GitHub actions, hosted at: https://wesleyhovick.github.io/react-playground/
 
 ## Getting Started
 
