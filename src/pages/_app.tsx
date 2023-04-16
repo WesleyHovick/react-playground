@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Rocket League Training Calendar</title>
+        <title>React Playground</title>
       </Head>
       <Component {...pageProps} />
     </>

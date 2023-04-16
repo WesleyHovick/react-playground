@@ -2,23 +2,25 @@ import { ThemeOptions } from "@mui/material";
 
 const sideNavWidth = '240px';
 
+const borderColor = 'rgba(210, 210, 210, 0.20)';
+
 export const themeOptions: ThemeOptions = {
     palette: {
         mode: 'dark',
         primary: {
-            main: 'rgba(12,117,228,0.91)',
+            main: 'rgba(12, 117, 228, 0.91)',
         },
         secondary: {
             main: '#b8b8b9',
         },
         background: {
             default: '#01050e',
-            paper: '#070618',
+            paper: '#000E3C',
         },
         text: {
             primary: '#53c1ec',
         },
-        divider: 'rgba(197,197,197,0.12)'
+        divider: `${borderColor}`
     },
     components: {
         MuiSvgIcon: {
@@ -39,9 +41,14 @@ export const themeOptions: ThemeOptions = {
             styleOverrides: {
                 root: {
                     width: `calc(100% - ${sideNavWidth})`,
-                    marginLeft: `${sideNavWidth}`
+                    marginLeft: `${sideNavWidth}`,
+                    backgroundImage: 'none',
+                    borderWidth: 0,
+                    borderStyle: 'solid',
+                    borderColor: `${borderColor}`,
+                    borderBottomWidth: 'thin'
                 },
-                positionFixed: true
+                positionFixed: true,
             },
         },
         MuiDrawer: {

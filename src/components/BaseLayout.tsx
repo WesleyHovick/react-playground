@@ -14,7 +14,7 @@ const theme: Theme = createTheme(themeOptions)
 export const BaseLayout: React.FC<IBaseLayout> = ({ children }): ReactElement => {
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline enableColorScheme={true} />
+            <CssBaseline />
             <Container>
                 { children }
             </Container>
