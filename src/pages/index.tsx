@@ -1,8 +1,8 @@
 import { BaseLayout } from '@/components/BaseLayout'
 import { InferGetServerSidePropsType } from 'next'
 
-export async function getServerSideProps() {
-    let res = await fetch('http://localhost:3000/api/weather', {
+export const getServerSideProps = async () => {
+    const res = await fetch(`${process.env.NEXT_API_URL}/api/weather`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
